@@ -52,10 +52,21 @@ kubectl get pods
 - Para testar se foi instalado rodar o comando:  <br>
   `terraform -v`
 
-### Mudando de versão do Terraform (com tfenv)
+### Gereciamento de Versões do Terraform com tfenv
+> #### Instalando 'tfenv' (WSL2)
+```sh
+# Clonando repositorio do 'tfenv'
+git clone --depth=1 https://github.com/tfutils/tfenv.git ~/.tfenv
+# fazendo a referencia no '.bashrc'
+echo 'export PATH=$PATH:$HOME/.tfenv/bin' >> ~/.bashrc
+# Compilando o '.bashrc'
+source ~/.bashrc
+```
+> #### Trocando de versão com 'tfenv'
 ```sh
 tfenv                 # Lista os comandos e versão do 'tfenv'
 tfenv list            # (1.2.1, 1.0.4, 0.14.4)
+tfenv install latest  # Instala a ultima versão do terraform
 tfenv use <version>   # para mudar a versão exe: 'tfenv use 0.14.4'
 ```
 
